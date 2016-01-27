@@ -1,9 +1,10 @@
-var config = require('../config');
+'use strict';
 
+var config = require('../config');
 
 var _authenticate = function(req, res, next) {
 
-  if (req.body.username !== req.body.passoword) {
+  if (req.body.username !== req.body.password) {
     return res.send(404, [{message:'Authentication failed, double check your credentials'}]);
   }
 
@@ -56,6 +57,6 @@ module.exports = function(app) {
     }
     _authenticate(req,res,next);
 
-  };
+  });
 
 };

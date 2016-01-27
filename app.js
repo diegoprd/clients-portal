@@ -1,3 +1,5 @@
+'use strict';
+
 var express = require('express');
 var morgan = require('morgan');
 var apiServer = require('./api');
@@ -15,6 +17,6 @@ app.use(morgan('combined'));
 //Including the API and webapp as a middleware
 app.use('/api', apiServer);
 
-var port = process.env.PORT || 5000;
+var port = process.env.PORT || 8012;
 app.listen(port);
 console.log('Starting - Clients Portal - on port: ' + port);
