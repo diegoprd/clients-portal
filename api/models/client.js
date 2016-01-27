@@ -4,12 +4,16 @@ var mongoose = require('mongoose');
 
 var clientSchema = new mongoose.Schema({
 	creationDate: {type: Date, default:Date.now, required: true},
-  status: {type: String, required: true},
-	title: {type: String, required: true},
-	fullDescription: {type: String, required: true},
-  mvpDescription: {type: String, required: true},
-	innovatorId: mongoose.Schema.Types.ObjectId,
-  engineerId: mongoose.Schema.Types.ObjectId
+  locations: [String],
+	height: {type: Number, required: true},
+  weight: {type: Number, required: true},
+	playingAge: {type: Number, required: true},
+  apparence: {type: String, required: true},
+	eyeColour: {type: String, required: true},
+  hairColour: {type: String, required: true},
+  hairLenght: {type: String, required: true},
+  agent: {type: String, required: true},
+  other: {type: String, required: true}
 });
 
 module.exports = mongoose.model('Client', clientSchema);
