@@ -16,4 +16,4 @@ app.use('/api', apiServer);
 
 var port = process.env.PORT || 5000;
 app.listen(port);
-console.log('Starting - My clients Portal - on port: ' + port);
+console.log('Starting - Clients Portal - on port: ' + port);

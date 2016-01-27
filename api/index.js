@@ -1,15 +1,10 @@
 var express = require('express');
-var _ = require('underscore');
+var _ = require('lodash');
 var glob = require('glob');
 var routesPath = __dirname + '/routes/';
-var expressJwt = require('express-jwt');
 var app = module.exports = express();
 
 //Initializing API Express
-app.use(expressJwt({
-  secret: 'my-ideal-app-prd',
-  skip: ['/signin', '/signup']
-}));
 app.use(express.json());
 app.use(express.urlencoded());
 

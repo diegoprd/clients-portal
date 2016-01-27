@@ -1,5 +1,5 @@
 {
-  "name": "My Clients Portal",
+  "name": "Clients Portal",
   "version": "1.0.0",
   "description": "This is an app that lets you manage and search your clients",
   "main": "app.js",

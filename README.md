@@ -1,14 +1,23 @@
-My App
+Clients Portal
 
 Description
 -----------
-This is our ticket to the yacht... :)
+Manage your clients and offer an easy to use searching page, for public use.
+
+1. Login as administrator to:
+  1. Add new Clients to your Data base
+  2. Edit/Remove existing ones
+
+2. As a public user:
+  1. See the clients list
+  2. Take a deeper look into one specific client
+  3. Search and filter the clients DB using a search bar
 
 
 How to run the app
 -------------------
 A few notes before the bullet list that everyone is looking for ;)
-The app uses gulp as the build system, mongo for the DB, CommonJs for the JS modules ecosystem (for both server and client side - Thanks to http://browserify.org/) and Backbone for the frontend
+The app uses gulp as the build system, nodeJs as the main technology and mongoDB for the DB.
 
 So now, lets go to the Installation bullets:
 
