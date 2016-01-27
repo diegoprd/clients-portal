@@ -1,6 +1,5 @@
 var gulp = require('gulp');
 var nodemon = require('gulp-nodemon');
-var open = require('open');
 var jscs = require('gulp-jscs');
 
 gulp.task('run-app', function() {

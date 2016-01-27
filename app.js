@@ -1,4 +1,5 @@
 var express = require('express');
+var morgan = require('morgan');
 var apiServer = require('./api');
 var mongoose = require('mongoose');
 
@@ -9,7 +10,7 @@ mongoose.connect(mongoUri);
 
 //Initializing Main Express
 var app = express();
-app.use(express.logger());
+app.use(morgan('combined'));
 
 //Including the API and webapp as a middleware
 app.use('/api', apiServer);

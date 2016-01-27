@@ -1,5 +1,4 @@
-var _ = require('underscore');
-var jwt = require('jsonwebtoken');
+var _ = require('lodash');
 var mongoose = require('mongoose');
 var User = require('../models/user');
 var userValidator = require('../validators/userValidator');
@@ -7,7 +6,7 @@ var emailValidator = require('../validators/emailValidator');
 
 
 module.exports = function(app) {
-	
+
   //Registers the new user (engineer or innovator) and signs it in.
 	app.post('/signup', function(req, res, next) {
     if (req.body.username && req.body.password && req.body.fullname) {
@@ -68,25 +67,22 @@ var _authenticate = function(req, res, next) {
 
       //Validating user
       User.findOne({username: req.body.username}, function(err, user) {
-        
+
         if (err) next(err);
-        
+
         if (_.isNull(user)){
           return res.send(404, [{message:'Authentication failed, double check your credentials'}]);
         }
 
         //Validating credentials
-        if (user.password != req.body.password) { 
+        if (user.password != req.body.password) {
           res.statusCode = 401;
           res.send([{message: 'Authentication failed, double check your credentials'}]);
         }
 
-        // Creating the Token
-        var token = jwt.sign({userId: user._id}, 'my-ideal-app-prd', { expiresInMinutes: 60*5 });
-
-        //Retriving token and full name for displaying purposes
-        res.json({ fullname: user.fullname, token: token });
+        //Retriving full name for displaying purposes
+        res.json({ fullname: user.fullname});
 
       });
-      
+
   };

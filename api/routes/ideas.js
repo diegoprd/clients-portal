@@ -1,5 +1,4 @@
-var _ = require('underscore');
-var jwt = require('jsonwebtoken');
+var _ = require('lodash');
 var Idea = require('../models/idea');
 var User = require('../models/user');
 var ideaValidator = require('../validators/ideaValidator');
@@ -37,7 +36,7 @@ module.exports = function(app) {
       status: 'PENDING_APPROVAL',
       innovatorId: req.user.userId
     };
-    
+
     var validator = ideaValidator.validate(ideaProperties);
 
     if (validator.valid) {
@@ -65,7 +64,7 @@ module.exports = function(app) {
       status: req.body.status,
       engineerId: req.user.engineerId
     };
-    
+
     var validator = ideaValidator.validate(ideaProperties);
 
     if (validator.valid) {
@@ -86,7 +85,7 @@ module.exports = function(app) {
   });
 
   app.delete('/ideas/:id', _findIdea, function(req, res, next) {
-    
+
     req.idea.remove( function(err, deletedItem) {
       if (err) next(err);
 
@@ -100,7 +99,7 @@ module.exports = function(app) {
 var _findIdea = function(req, res, next) {
   //Retrieve the idea entity
   Idea.findById(req.params.id, function(err, idea) {
-    
+
       if (err || _.isNull(idea) || (!req.user.userId === innovatorId.userId || !req.user.userId === engineerId.userId)) {
         res.statusCode = 404;
         res.end("Idea Not found");
@@ -117,7 +116,7 @@ var _generateCriteria = function(req, res, next) {
 
   //Retrieve the idea entity
   User.findById(req.user.userId, function(err, user) {
-    
+
       if (err || _.isNull(user)) {
         res.statusCode = 404;
         res.end("User Not found");

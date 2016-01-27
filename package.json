@@ -1,5 +1,5 @@
 {
-  "name": "Clients Portal",
+  "name": "clients-portal",
   "version": "1.0.0",
   "description": "This is an app that lets you manage and search your clients",
   "main": "app.js",
@@ -9,21 +9,17 @@
     "node": "0.10.x"
   },
   "dependencies": {
-    "connect-flash": "^0.1.1",
-    "express": "~3.5.0",
-    "express-jwt": "~0.2.1",
-    "glob": "^4.0.2",
-    "gulp": "^3.8.8",
+    "body-parser": "^1.14.2",
+    "express": "^4.13.4",
+    "glob": "^6.0.4",
+    "gulp": "^3.9.0",
+    "gulp-jscs": "^3.0.2",
+    "lodash": "^4.0.1",
+    "moment": "^2.11.1",
+    "mongoose": "^4.3.7",
+    "morgan": "^1.6.1"
   },
   "devDependencies": {
-    "chai": "~1.9.1",
-    "gulp": "~3.8.2",
-    "gulp-jscs": "^1.2.0",
-    "gulp-nodemon": "~1.0.2",
-    "gulp-notify": "^2.0.0",
-    "gulp-open": "~0.2.8",
-    "gulp-util": "~2.2.14",
-    "mocha": "~1.18.2",
-    "open": "0.0.5"
+    "gulp-nodemon": "^2.0.6"
   }
 }

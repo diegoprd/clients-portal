@@ -1,12 +1,13 @@
 var express = require('express');
+var bodyParser = require('body-parser')
 var _ = require('lodash');
 var glob = require('glob');
 var routesPath = __dirname + '/routes/';
 var app = module.exports = express();
 
 //Initializing API Express
-app.use(express.json());
-app.use(express.urlencoded());
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded());
 
 //Initializing API Routes
 //(Dynamically loading all entry points in all
