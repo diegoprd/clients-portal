@@ -1,0 +1,29 @@
+{
+  "name": "My Clients Portal",
+  "version": "1.0.0",
+  "description": "This is an app that lets you manage and search your clients",
+  "main": "app.js",
+  "author": "Diego Hernan Prado Barro",
+  "license": "ISC",
+  "engines": {
+    "node": "0.10.x"
+  },
+  "dependencies": {
+    "connect-flash": "^0.1.1",
+    "express": "~3.5.0",
+    "express-jwt": "~0.2.1",
+    "glob": "^4.0.2",
+    "gulp": "^3.8.8",
+  },
+  "devDependencies": {
+    "chai": "~1.9.1",
+    "gulp": "~3.8.2",
+    "gulp-jscs": "^1.2.0",
+    "gulp-nodemon": "~1.0.2",
+    "gulp-notify": "^2.0.0",
+    "gulp-open": "~0.2.8",
+    "gulp-util": "~2.2.14",
+    "mocha": "~1.18.2",
+    "open": "0.0.5"
+  }
+}
