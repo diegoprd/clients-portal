@@ -1,0 +1,85 @@
+{
+  "title": "client payload",
+  "description": "The payload for searching the db",
+  "type": "object",
+  "properties": {
+    "height": {"type": "number"},
+    "weight": {"type": "number"},
+    "playingAge": {
+      "type":"number",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "_id": {"type": "string"},
+    "firstName": {"type": "string"},
+    "lastName": {"type": "string"},
+    "appearance": {"type": "string"},
+    "eyeColour": {"type": "string"},
+    "hairColour": {"type": "string"},
+    "hairLenght": {"type": "string"},
+    "agent": {"type": "string"},
+    "gender": {"type": "string"},
+    "international": {"type": "boolean"},
+    "other": {"type": "string"},
+    "locations": {
+      "description": "Locations where this client can work",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "dialects": {
+      "description": "list of dialects it speaks",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "languages": {
+      "description": "list of languages it speaks",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "music": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "dance": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "performances": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "sports": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "otherSkills": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,6 +1,6 @@
 'use strict';
 
-var config = require('../config');
+var config = require('../config/config');
 
 var _authenticate = function(req, res, next) {
 

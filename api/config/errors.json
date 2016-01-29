@@ -1,0 +1,7 @@
+{
+  "payload": {
+    "code": 1,
+    "title": "Invalid Payload",
+    "message": "Error in the payload."
+  }
+}

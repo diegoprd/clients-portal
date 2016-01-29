@@ -1,0 +1,142 @@
+{
+  "title": "client payload",
+  "description": "The payload that we need to receive to create a client in the db",
+  "type": "object",
+  "properties": {
+    "creationDate": {"type": "string"},
+    "height": {"type": "number"},
+    "weight": {"type": "number"},
+    "playingAge": {
+      "type":"number",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "firstName": {"type": "string"},
+    "lastName": {"type": "string"},
+    "appearance": {"type": "string"},
+    "eyeColour": {"type": "string"},
+    "hairColour": {"type": "string"},
+    "hairLenght": {"type": "string"},
+    "agent": {"type": "string"},
+    "gender": {"type": "string"},
+    "international": {"type": "boolean"},
+    "other": {"type": "string"},
+    "links": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {"type":"string"},
+          "url": {"type":"string"}
+        },
+        "required": ["name", "url"],
+        "additionalProperties": false
+      }
+    },
+    "training": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "from": {
+            "type":"number",
+            "minimum": 1800,
+            "maximum": 3000
+          },
+          "to": {
+            "type":"number",
+            "minimum": 1800,
+            "maximum": 3000
+          },
+          "degree": {"type":"string"},
+          "institute": {"type":"string"}
+        },
+        "required": ["from", "degree", "institute"],
+        "additionalProperties": false
+      }
+    },
+    "credits": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "type": {"type":"string"},
+          "role": {"type":"string"},
+          "productionName": {"type":"string"},
+          "company": {"type":"string"},
+          "director": {"type":"string"}
+        },
+        "required": ["type", "role", "productionName", "company", "director"],
+        "additionalProperties": false
+      }
+    },
+    "locations": {
+      "description": "Locations where this client can work",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "images": {
+      "description": "links to its images",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "dialects": {
+      "description": "list of dialects it speaks",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "languages": {
+      "description": "list of languages it speaks",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "music": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "dance": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "performances": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "sports": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "otherSkills": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    }
+  },
+  "additionalProperties": false
+}
