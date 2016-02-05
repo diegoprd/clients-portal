@@ -1,0 +1,59 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline; }
+
+li {
+  display: list-item;
+  text-align: -webkit-match-parent; }
+
+p {
+  display: block;
+  -webkit-margin-before: 1em;
+  -webkit-margin-after: 1em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px; }
+
+a, .link {
+  text-decoration: none;
+  color: #56A0D3;
+  -moz-transition-property: color;
+  -o-transition-property: color;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -moz-transition-duration: 0.1s;
+  -o-transition-duration: 0.1s;
+  -webkit-transition-duration: 0.1s;
+  transition-duration: 0.1s; }
+
+#categories {
+  margin: 10px;
+  padding: 30px;
+  background-color: blue; }
+  #categories .category {
+    margin-bottom: 10px; }
+    #categories .category h1 {
+      background-color: #383433;
+      height: 45px;
+      color: #FDFDFD; }
+    #categories .category div.category-image {
+      max-width: 222px;
+      height: 374px;
+      background-image: url("../images/no-category-img.jpg"); }
+
+#list {
+  margin: 10px;
+  padding: 30px;
+  background-color: red; }
+  #list .client {
+    margin-bottom: 10px; }
+    #list .client div.client-image {
+      max-width: 140px;
+      height: 200px;
+      background-image: url("../images/no-client-list-profile-img.jpg"); }
+
+body {
+  background-color: #fcfcfc; }

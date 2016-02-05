@@ -1,0 +1,18 @@
+<div id="f1_container">
+  <div id="f1_card" class="shadow" ng-class="{rotate: login || reviews}">
+
+    <div class="front face">
+      <button  class="btn btn-info" ng-click="login = !login">
+        Login
+      </button>
+      <button  class="btn btn-info" ng-click="reviews = !reviews">
+        Reviews
+      </button>
+    </div>
+
+    <div class="back face">
+      <ng-include ng-if="login" src="'views/partials/login.html'"></ng-include>
+      <ng-include ng-if="reviews" src="'views/partials/reviewsSearchBar.html'"></ng-include>
+    </div>
+  </div>
+</div>

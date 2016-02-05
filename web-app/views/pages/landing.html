@@ -1,0 +1,44 @@
+<div>
+  <a href="#/login" >Login</a>
+</div>
+
+<section id="categories" ng-show="view === 'CATEGORIES'">
+
+  <div class="category" ng-repeat="category in categories" ng-click="startSearch(category);">
+    <div class="category-image"><img ng-src="{{category.img}}" alt=""></div>
+    <h1>{{category.title}}</h1>
+  </div>
+
+</section>
+
+<section id="list" ng-show="view === 'LIST'">
+  <div class="search-bar">
+    <form novalidate class="search-bar-form">
+      First Name: <input type="text" ng-model="criteria.firstName" ng-change="search()" />
+      Last Name: <input type="text" ng-model="criteria.lastName" ng-change="search()" />
+      Appearance: <input type="text" ng-model="criteria.appearance" ng-change="search()" />
+      Hair Colour: <input type="text" ng-model="criteria.hairColour" ng-change="search()" />
+      Hair Lenght: <input type="text" ng-model="criteria.hairLenght" ng-change="search()" />
+      Agent: <input type="text" ng-model="criteria.agent" ng-change="search()" />
+      Gender: <input type="text" ng-model="criteria.gender" ng-change="search()" />
+      Location: <input type="text" ng-model="criteria.locations" ng-change="search()" />
+      Dialects: <input type="text" ng-model="criteria.dialects" ng-change="search()" />
+      Languages: <input type="text" ng-model="criteria.languages" ng-change="search()" />
+      Music: <input type="text" ng-model="criteria.music" ng-change="search()" />
+      Dance: <input type="text" ng-model="criteria.dance" ng-change="search()" />
+      Performances: <input type="text" ng-model="criteria.performances" ng-change="search()" />
+      Sports: <input type="text" ng-model="criteria.sports" ng-change="search()" />
+      Other SKills: <input type="text" ng-model="criteria.otherSkills" ng-change="search()" />
+      Other: <input type="text" ng-model="criteria.other" ng-change="search()" />
+      <input type="radio" ng-model="criteria.international" ng-value="true" ng-change="search()" />International
+      <input type="button" ng-click="search({})" value="Reset" />
+      <input type="submit" ng-click="search()" value="Search" />
+    </form>
+  </div>
+
+  <div class="client" ng-repeat="client in clients">
+    <div class="client-image"><img ng-src="{{client.images[0]}}" alt=""></div>
+    <h1>{{client.firstName}}, {{client.lastName}}</h1>
+  </div>
+
+</section>

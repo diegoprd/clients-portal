@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="cp-app" >
+
+<head>
+  <title>Clients Portal</title>
+
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" type="text/css" href="./bower_components/bootstrap/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="./bower_components/html5-boilerplate/css/normalize.css">
+  <link rel="stylesheet" href="./bower_components/html5-boilerplate/css/main.css">
+  <link rel="stylesheet" href="./styles/css/main.css">
+
+  <script type="text/javascript" src="./bower_components/angular/angular.js"></script>
+  <script src="./bower_components/angular-animate/angular-animate.js"></script>
+  <script type="text/javascript" src="./bower_components/angular-route/angular-route.min.js"></script>
+  <script type="text/javascript" src="./bower_components/ng-lodash/build/ng-lodash.min.js"></script>
+
+  <!-- Loading the APP specific files -->
+  <script type="text/javascript" src="./app.js"></script>
+  <!--
+  <script type="text/javascript" src="./directives/mainBar.js"></script>
+  <script type="text/javascript" src="./controllers/mainBarController.js"></script>
+   -->
+  <script type="text/javascript" src="./services/configurationService.js"></script>
+  <script type="text/javascript" src="./services/clientsService.js"></script>
+  <script type="text/javascript" src="./controllers/clientsListController.js"></script>
+</head>
+
+<body>
+
+  <div ng-view></div>
+
+</body>
+</html>

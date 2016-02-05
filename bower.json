@@ -1,0 +1,22 @@
+{
+  "name": "letting-you-know-front",
+  "description": "You will see ;)",
+  "version": "0.0.1",
+  "homepage": "https://github.com/tiziana",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "~3.2.0",
+    "font-awesome": "~4.2.0",
+    "angular": "~1.3.0",
+    "angular-route": "~1.3.0",
+    "bootstrap-sass-official": "~3.3.4",
+    "moment": "~2.10.2",
+    "ng-notifications-bar": "~0.0.14",
+    "html5-boilerplate": "~4.3.0",
+    "ng-lodash": "~0.1.0",
+    "lodash": "~2.4.1",
+    "angular-animate": "1.3.15",
+    "include-media": "~1.3.0"
+  }
+}

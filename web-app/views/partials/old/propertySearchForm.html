@@ -1,0 +1,19 @@
+<form id="homesearch-for-sale" class="search-form for-sale-tabcontent" method="POST" action="/locations/search/" style="display: none;">
+  <input type="hidden" name="search-type" value="prices">
+  <input type="hidden" name="view" value="grid">
+
+  <div class="for-sale">
+
+    <div class="form-group typeahead-default full-width-text-submit">
+      <div class="typeahead-cont">
+        <input id="search-location-sale" name="search" type="text" autocomplete="off" class="typeahead" placeholder="e.g. Bristol, SW6, G61 2DW, Victoria Station">
+        <input name="location-id" type="hidden" value="">
+        <ul class="typeahead-results list-group" style="display: none;"></ul>
+      </div>
+      <button type="submit" id="submit-sale" class="input-cta">
+        <i class="icon-search"></i>
+        <span class="text">Search</span>
+      </button>
+    </div>
+  </div>
+</form>

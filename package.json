@@ -8,12 +8,22 @@
   "engines": {
     "node": "0.10.x"
   },
+  "scripts": {
+    "postinstall": "bower install",
+    "prestart": "npm install",
+    "start-server": "gulp run-back",
+    "start-front": "gulp run-front"
+  },
   "dependencies": {
     "body-parser": "^1.14.2",
+    "bower": "^1.7.7",
+    "cors": "^2.7.1",
     "express": "^4.13.4",
     "glob": "^6.0.4",
     "gulp": "^3.9.0",
     "gulp-jscs": "^3.0.2",
+    "gulp-sass": "^2.1.1",
+    "gulp-webserver": "^0.9.1",
     "jsonschema": "^1.0.3",
     "lodash": "^4.0.1",
     "moment": "^2.11.1",
