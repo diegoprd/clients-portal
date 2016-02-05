@@ -1,5 +1,8 @@
-<div>
-  <a href="#/login" >Login</a>
+<div ng-if="!user.authenticated" ng-click="toLogin()">
+  Login
+</div>
+<div ng-if="user.authenticated" >
+  Hi <span>{{user.fullname}}</span>, <span ng-click="logOut()" >Logout</span>
 </div>
 
 <section id="categories" ng-show="view === 'CATEGORIES'">
@@ -12,6 +15,7 @@
 </section>
 
 <section id="list" ng-show="view === 'LIST'">
+  <div ng-if="user.authenticated" ng-click="addClient()">Add new client</div>
   <div class="search-bar">
     <form novalidate class="search-bar-form">
       First Name: <input type="text" ng-model="criteria.firstName" ng-change="search()" />
@@ -36,9 +40,15 @@
     </form>
   </div>
 
-  <div class="client" ng-repeat="client in clients">
-    <div class="client-image"><img ng-src="{{client.images[0]}}" alt=""></div>
-    <h1>{{client.firstName}}, {{client.lastName}}</h1>
+  <div class="clients-list">
+    <div class="client" ng-repeat="client in clients">
+      <div class="client-image"><img ng-src="{{client.images[0]}}" alt=""></div>
+      <h1>{{client.firstName}}, {{client.lastName}}</h1>
+      <div>Credits Include</div>
+      <div class="credit" ng-repeat="credit in client.credits">
+        {{credit.type}}, {{credit.role}}, {{credit.productionName}}
+      </div>
+    </div>
   </div>
 
 </section>

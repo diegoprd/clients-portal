@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('cp-app').controller('ClientsListCtrl', ['lodash', '$scope', 'ClientsService', function(_ , $scope, ClientsService) {
+angular.module('cp-app').controller('ClientsListCtrl', ['lodash', '$scope', 'ClientsService', '$localStorage', '$location', '$routeParams',function(_ , $scope, ClientsService, $localStorage, $location, $routeParams) {
 
   $scope.setView = function(selectedView) {
     $scope.view = selectedView;
@@ -34,11 +34,38 @@ angular.module('cp-app').controller('ClientsListCtrl', ['lodash', '$scope', 'Cli
 
   };
 
+  $scope.toLogin = function() {
+    $location.url('/login');
+  };
+
+  $scope.logOut = function() {
+    delete $localStorage.authentication;
+    $location.url('/');
+  };
+
+  $scope.addClient = function() {
+    $location.url('/clientForm');
+  };
+
   var initialize = function() {
 
     $scope.criteria = {};
-    $scope.setView('CATEGORIES');
 
+    console.log('habia:', $localStorage.authentication);
+
+    var admin = $localStorage.authentication;
+
+    if (admin && admin.token === $routeParams.id ) {
+      $scope.user = {
+        authenticated: true,
+        fullname: admin.fullname
+      };
+      $scope.setView('LIST');
+      return;
+    }
+
+    $scope.user = null;
+    $scope.setView('CATEGORIES');
     $scope.categories = ClientsService.getCategories();
 
   }

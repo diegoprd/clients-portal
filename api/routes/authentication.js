@@ -1,6 +1,7 @@
 'use strict';
 
 var config = require('../config/config');
+var randtoken = require('rand-token');
 
 var _authenticate = function(req, res, next) {
 
@@ -13,7 +14,12 @@ var _authenticate = function(req, res, next) {
   }
 
   //Retriving full name for displaying purposes
-  res.json({ fullname: config.admin.displayName});
+  res.json(
+    {
+      fullname: config.admin.displayName,
+      token: randtoken.generate(16)
+    }
+  );
 
 };
 

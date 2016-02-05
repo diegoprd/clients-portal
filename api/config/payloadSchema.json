@@ -51,7 +51,7 @@
           "degree": {"type":"string"},
           "institute": {"type":"string"}
         },
-        "required": ["from", "degree", "institute"],
+        "required": ["from", "to", "degree", "institute"],
         "additionalProperties": false
       }
     },
@@ -66,7 +66,7 @@
           "company": {"type":"string"},
           "director": {"type":"string"}
         },
-        "required": ["type", "role", "productionName", "company", "director"],
+        "required": ["type", "role", "productionName"],
         "additionalProperties": false
       }
     },
@@ -138,5 +138,6 @@
       "uniqueItems": true
     }
   },
-  "additionalProperties": false
+  "additionalProperties": false,
+  "required": ["firstName", "lastName", "agent", "gender"]
 }

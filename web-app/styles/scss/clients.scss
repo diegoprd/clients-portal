@@ -3,14 +3,19 @@
   padding: 30px;
   background-color: red;
 
-  .client {
+  .clients-list {
+    margin-top: 30px;
+    background-color: green;
+    .client {
 
-    margin-bottom: 10px;
+      margin-bottom: 10px;
 
-    div.client-image {
-      max-width: 140px;
-      height: 200px;
-      background-image: url("../images/no-client-list-profile-img.jpg");
+      div.client-image {
+        max-width: 140px;
+        height: 200px;
+        background-image: url("../images/no-client-list-profile-img.jpg");
+      }
     }
   }
+
 }

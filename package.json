@@ -28,7 +28,8 @@
     "lodash": "^4.0.1",
     "moment": "^2.11.1",
     "mongoose": "^4.3.7",
-    "morgan": "^1.6.1"
+    "morgan": "^1.6.1",
+    "rand-token": "^0.2.1"
   },
   "devDependencies": {
     "gulp-nodemon": "^2.0.6"

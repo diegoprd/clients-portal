@@ -48,12 +48,15 @@ a, .link {
   margin: 10px;
   padding: 30px;
   background-color: red; }
-  #list .client {
-    margin-bottom: 10px; }
-    #list .client div.client-image {
-      max-width: 140px;
-      height: 200px;
-      background-image: url("../images/no-client-list-profile-img.jpg"); }
+  #list .clients-list {
+    margin-top: 30px;
+    background-color: green; }
+    #list .clients-list .client {
+      margin-bottom: 10px; }
+      #list .clients-list .client div.client-image {
+        max-width: 140px;
+        height: 200px;
+        background-image: url("../images/no-client-list-profile-img.jpg"); }
 
 body {
   background-color: #fcfcfc; }
